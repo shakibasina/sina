@@ -18,10 +18,63 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/css/swiper-gallery.css" rel="stylesheet">
+    <script>
+        function hideLoading(){
+            document.querySelector("body.loading").classList.remove("loading");
+            document.querySelector(".loading-box").classList.add("hidden")
+        }
+        window.onload = hideLoading;
+    </script>
 </head>
 <!-- Body Start -->
 
-<body class="vazir" dir="rtl">
+<body class="vazir loading" dir="rtl">
+
+    <!-- Loading Page -->
+    <style>
+        .loading-box{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 99999;
+            justify-content: center;
+            align-items: center;
+        }
+        .loading-box.hidden{
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loader {
+        color: #fff;
+        width: 4px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+        transform: translateX(-38px);
+        animation: l21 .5s infinite alternate linear;
+        margin-right: 50%;
+        margin-top: 200px
+      }
+      
+      @keyframes l21 {
+        50%  {box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px}
+        100% {box-shadow: 19px 0 0 0  , 38px 0 0 3px, 57px 0 0 7px}
+      }
+      
+      body.loading{
+        overflow: hidden;
+        pointer-events: none;
+        user-select: none;
+      }
+      </style>
+    <div class="loading-box">
+        <div class="loader"></div>
+    </div>
+
     <div class="bg-effect"></div>
     <div class="wrapper">
         <!-- Mobile Header -->
