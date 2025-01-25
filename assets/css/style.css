@@ -30,42 +30,26 @@ Primary use:    pxdraft
 }
 
 @font-face {
-  font-family: "Yekan";
-  src: url("../fonts/Yekan.eot");
-  src: url("../fonts/Yekan.woff") format("woff"),
-  url("../fonts/Yekan.ttf") format("opentype"),
-  url("../fonts/Yekan.svg") format("svg");
-}
-@font-face {
-  font-family: "Vazir-ExtraBold";
-  src: url("../fonts/Vazirmatn-ExtraBold.woff2") format("woff"),
-  url("../fonts/Vazirmatn-ExtraBold.ttf") format("opentype"),
-}
-@font-face {
-  font-family: "Vazir-Bold";
-  src: url("../fonts/Vazirmatn-Bold.woff2") format("woff"),
-  url("../fonts/Vazirmatn-Bold.ttf") format("opentype"),
-}
-@font-face {
-  font-family: "Vazir-Regular";
-  src: url("../fonts/Vazirmatn-Regular.woff2") format("woff"),
-  url("../fonts/Vazirmatn-Regular.ttf") format("opentype"),
-}
-@font-face {
-  font-family: "Vazir-Light";
-  src: url("../fonts/Vazirmatn-Light.woff2") format("woff"),
-  url("../fonts/Vazirmatn-Light.ttf") format("opentype"),
+  font-family: "Vazir";
+  src: url('../fonts/Vazir.eot');
+  src: url('../fonts/Vazir.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Vazir.woff2') format('woff2'),
+       url('../fonts/Vazir.woff') format('woff'),
+       url('../fonts/Vazir.ttf') format('truetype');
+  font-weight: normal;
 }
 
 @font-face {
-  font-family: "FontAwesome";
-  src: url("../fonts/fontawesome-webfont.eot");
-  src: url("../fonts/fontawesome-webfont.woff") format("woff"),
-  url("../fonts/fontawesome-webfont.ttf") format("opentype"),
-  url("../fonts/fontawesome-webfont.svg") format("svg");
+  font-family: "Vazir-ExtraBold";
+  src: url('../fonts/Vazir-Black.eot');
+  src: url('../fonts/Vazir-Black.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Vazir-Black.woff2') format('woff2'),
+       url('../fonts/Vazir-Black.woff') format('woff'),
+       url('../fonts/Vazir-Black.ttf') format('truetype');
+  font-weight: 900;
 }
 .vazir{
-  font-family: "Vazir-Regular" !important;
+  font-family: "Vazir" !important;
 }
 :root,
 [data-bs-theme=light] {
@@ -789,7 +773,7 @@ img {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
+  right: 45px;
   width: 60px;
   height: 3px;
   background-color: var(--px-theme);
